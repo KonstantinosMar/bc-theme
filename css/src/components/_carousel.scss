@@ -1,0 +1,101 @@
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+
+  .carousel {
+    &.teams {
+      display: flex;
+      gap: 16px;
+      cursor: grab;
+      transition: transform 0.5s ease-in-out;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      .carousel-item {
+        @include btn;
+        display: flex;
+        gap: 8px;
+        width: 80px;
+        cursor: pointer;
+        img {
+
+        }
+        .title {
+          font-size: 14px;
+          margin: 0;
+        }
+        .count {
+          background-color: $lightGreenBackground;
+          padding: 1px 4px;
+          border-radius: 16px;
+          font-size: 12px;
+        }
+
+        &:last-child {
+          margin-right: 50px;
+        }
+      }
+    }
+
+    &.banners {
+      display: flex;
+      gap: 16px;
+      cursor: grab;
+      transition: transform 0.5s ease-in-out;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+  }
+
+  .next-button {
+    @include btn;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(250, 251, 252, 0.3);
+    box-shadow: 0 8px 16px rgba(24, 65, 92, 0.08);
+    z-index: 2;
+  }
+
+  .prev-button {
+    @include btn;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(250, 251, 252, 0.3);
+    box-shadow: 0 8px 16px rgba(24, 65, 92, 0.08);
+    z-index: 2;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .background-overlay {
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(270deg, #062437 16.26%, rgba(6, 36, 55, 0) 100%);
+  }
+}

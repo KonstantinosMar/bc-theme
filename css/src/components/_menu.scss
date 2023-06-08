@@ -1,0 +1,107 @@
+.menu-container {
+  &-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &.open {
+
+       .menuItem {
+         &__title {
+           max-width: 100px;
+           padding-right: 14px;
+           transition: max-width 0.7s;
+         }
+       }
+    }
+
+    .menuItem {
+      list-style-type: none;
+      &__link {
+        gap: 0;
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        img {
+          padding: 14px 19px;
+        }
+      }
+
+      &__title {
+        padding: 0;
+        margin: 0;
+        color: $greenText;
+        overflow: hidden;
+        max-width: 0;
+        transition: all 0.3s;
+      }
+
+      &.current-menu-item {
+        @include btn;
+        padding: 0;
+        width: fit-content;
+      }
+    }
+  }
+
+  .toggle {
+    cursor: pointer;
+    display: inline-block;
+
+    .toggle-switch {
+      display: inline-block;
+      background: #213848;
+      border-radius: 16px;
+      width: 58px;
+      height: 24px;
+      position: relative;
+      vertical-align: middle;
+      transition: background 0.25s;
+
+      &:before,
+      &:after {
+        content: "";
+      }
+
+      &:before {
+        display: block;
+        background-color: #394E5D;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: -3px;
+        left: -2px;
+        transition: left 0.25s;
+      }
+
+    }
+
+    .toggle-checkbox:checked + .toggle-switch {
+      background: #213848;
+
+      &:before {
+        content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.51151 0C6.92143 0.549819 6.44814 1.21285 6.11987 1.94955C5.79161 2.68624 5.6151 3.4815 5.60087 4.28789C5.58664 5.09428 5.73499 5.89528 6.03706 6.64309C6.33913 7.39091 6.78873 8.07022 7.35905 8.64052C7.92937 9.21081 8.60872 9.66039 9.35658 9.96245C10.1044 10.2645 10.9055 10.4128 11.7119 10.3986C12.5183 10.3844 13.3136 10.2079 14.0504 9.87963C14.7871 9.55139 15.4502 9.07812 16 8.48806C15.7453 12.68 12.2651 16 8.00881 16C3.58519 16 0 12.415 0 7.99239C0 3.73635 3.32012 0.256243 7.51151 0Z' fill='%2300BCA5'/%3E%3C/svg%3E%0A");
+        left: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .toggle-checkbox {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+  hr {
+    margin: 32px 0;
+    height: 1px;
+    border: none;
+    background: #FFFFFF1A;
+  }
+
+}

@@ -1,0 +1,28 @@
+html {
+  font-family: 'Roboto', serif;
+  font-weight: 400;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #052A3A;
+  color: $whiteText;
+}
+
+#content, .header, .footer {
+  .wrapper {
+    max-width: $containerWidth;
+    margin: auto;
+    @media (max-width: $containerWidth) {
+      margin: 0 20px;
+    }
+  }
+}
+
+#content .wrapper {
+  display: flex;
+  gap: 32px;
+  overflow: hidden;
+}

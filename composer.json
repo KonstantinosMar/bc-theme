@@ -1,0 +1,21 @@
+{
+  "autoload": {
+    "psr-4": {
+      "BC\\": "inc"
+    }
+  },
+  "authors": [
+    {
+      "email": "test@test.test",
+      "name": "Konstantinos Marinopoulos"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "require": {
+    "timber/timber": "^1.22"
+  }
+}

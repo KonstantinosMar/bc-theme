@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+   <div class="main-content">
+      <div class="teams-banners">
+         <div class="all-teams-button"><img src="{{ imageUrls.rightArrow }}" alt="right-arrow" /> <h5>All Tips</h5></div>
+         {% include 'partials/carousel.twig' with {'data': layout.teams, 'class': 'teams'} %}
+      </div>
+      {{ layout.homeWidgetArea }}
+
+   </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+.header {
+  padding: 16px 0;
+  .header-container {
+    display: flex;
+    align-items: center;
+    gap: 133px;
+    &-left, &-right {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    &-left {
+      .burger-button {
+        @include btn;
+        padding: 12px 16px;
+      }
+    }
+
+    &-right {
+      flex-grow: 4;
+      .input-container {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #FFFFFF1A;
+        border-radius: 100px;
+        background-color: $lightBlueBackground;
+        padding: 4px 16px 4px 16px;
+        gap: 6px;
+
+        input {
+          width: 100%;
+          background-color: transparent;
+          border: unset;
+          outline: none;
+          color: $whiteText;
+        }
+      }
+      .chat-button {
+        @include btn;
+        gap: 6px;
+      }
+    }
+
+  }
+}

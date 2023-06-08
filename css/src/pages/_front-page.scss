@@ -1,0 +1,28 @@
+.main-content {
+  overflow: hidden;
+  .teams-banners {
+    display: flex;
+    gap: 32px;
+    .all-teams-button {
+      @include btn;
+      gap: 12px;
+      padding-right: 16px;
+      position: relative;
+      font-size: 14px;
+      h5 {
+        margin: 0;
+        width: max-content;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: #FFFFFF1A;
+        right: -16px;
+        top: 0;
+      }
+    }
+  }
+}

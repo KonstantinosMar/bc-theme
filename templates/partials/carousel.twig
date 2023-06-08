@@ -1,0 +1,23 @@
+<div class="carousel-container">
+    <div class="carousel {{ class }}">
+        {% for item in data %}
+            <div class="carousel-item">
+                {% if item.image %}
+                    <img src="{{ item.image }}" alt="{{ item.title }}" draggable="false" />
+                {% endif %}
+
+                {% if item.image %}
+                    <h4 class="title">{{ item.title }}</h4>
+                {% endif %}
+
+                {% if item.count %}
+                    <span class="count">{{ item.count }}</span>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <a href="#" class="next-button"><img src="{{ imageUrls.rightArrow }}" alt="right-arrow" /></a>
+    <a href="#" class="prev-button" style="display: none;"><img src="{{ imageUrls.rightArrow }}" alt="right-arrow" /></a>
+
+    <div class="background-overlay"></div>
+</div>

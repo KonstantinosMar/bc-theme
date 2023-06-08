@@ -1,0 +1,25 @@
+<nav class="menu-container" role="navigation">
+    <ul class="menu-container-list">
+        {% for item in menu.get_items %}
+            <li class="menuItem {{ item.classes | join(' ') }}">
+                <a class="menuItem__link" href="{{ item.link }}">
+                    {% if item.custom._custom_menu_meta.icon %}
+                        <img class="menuItem__image" src="{{ item.custom._custom_menu_meta.icon }}"
+                             alt="menu image"/>
+                    {% endif %}
+                    <p class="menuItem__title">{{ item.title }}</p>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <hr/>
+
+    <label class="toggle">
+        <input class="toggle-checkbox" type="checkbox" checked>
+        <div class="toggle-switch"></div>
+    </label>
+
+    <hr/>
+</nav>
+

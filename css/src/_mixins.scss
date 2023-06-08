@@ -1,0 +1,16 @@
+@mixin addContainerWidth {
+  max-width: $containerWidth;
+  margin: auto;
+}
+
+@mixin btn {
+  border: 1px solid #FFFFFF1A;
+  border-radius: 100px;
+  padding: 8px 16px;
+  background-color: $lightBlueBackground;
+  color: $whiteText;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
